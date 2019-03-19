@@ -1,0 +1,12 @@
+Resources:
+
+    snesiLambda2: 
+        Type: "AWS::Lambda::Function"
+        Properties: 
+            Handler: "mylambda.handler"
+            Role: arn:aws:iam::946731520504:role/service-role/lamda_basic_execution
+            Code:
+                S3Bucket: "sme-artifact-bucket"
+                S3Key: "snesimylambda.zip"
+            Runtime: "python3.7"
+            Timeout: 5
